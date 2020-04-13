@@ -1,0 +1,16 @@
+PODS:
+  - LFAssetExportSession (1.0.0)
+
+DEPENDENCIES:
+  - LFAssetExportSession
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - LFAssetExportSession
+
+SPEC CHECKSUMS:
+  LFAssetExportSession: b15b0e37fae4c7cc79c67dd225dbf39daf187863
+
+PODFILE CHECKSUM: 94f0b2b5997aeea550eb4072fecc8c16b2b9227c
+
+COCOAPODS: 1.9.1
