@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'LFFilterSuite'
-s.version      = '1.0.0'
+s.version      = '1.0.1'
 s.summary      = 'Filter kit, it is easier to use filters on pictures or videos.'
 s.homepage     = 'https://github.com/lincf0912/LFFilterSuite'
 s.license      = 'MIT'
