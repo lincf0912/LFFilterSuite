@@ -70,6 +70,11 @@
     _sampleBufferHolder = [LFSampleBufferHolder new];
 }
 
+- (void)dealloc
+{
+    [self unloadContext];
+}
+
 - (BOOL)loadContextIfNeeded {
     if (_context == nil) {
         LFContextType contextType = _contextType;
@@ -127,6 +132,7 @@
 - (void)unloadContext {
     if (_GLKView != nil) {
         [_GLKView removeFromSuperview];
+        _GLKView.delegate = nil;
         _GLKView = nil;
     }
     if (_LFLView != nil) {
@@ -142,6 +148,7 @@
         _MTLCommandQueue = nil;
         [_MTKView removeFromSuperview];
         [_MTKView releaseDrawables];
+        _MTKView.delegate = nil;
         _MTKView = nil;
     }
 
