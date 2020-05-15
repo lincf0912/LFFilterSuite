@@ -15,9 +15,11 @@
 #ifdef NSFoundationVersionNumber_iOS_9_0
 @import MetalKit;
 @interface LFContextImageView()<GLKViewDelegate, MTKViewDelegate>
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
 @property (nonatomic, weak) MTKView *MTKView;
 @property (nonatomic, strong) id<MTLCommandQueue> MTLCommandQueue;
+#pragma clang diagnostic pop
 #else
 @interface LFContextImageView()<GLKViewDelegate>
 #endif
