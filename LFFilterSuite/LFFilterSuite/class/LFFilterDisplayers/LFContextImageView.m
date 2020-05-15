@@ -562,6 +562,8 @@ static CGRect LF_CGRectMultiply(CGRect rect, CGFloat contentScale) {
 }
 
 #ifdef NSFoundationVersionNumber_iOS_9_0
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
 #pragma mark -- MTKViewDelegate
 
 - (void)drawInMTKView:(nonnull MTKView *)view {
@@ -587,6 +589,7 @@ static CGRect LF_CGRectMultiply(CGRect rect, CGFloat contentScale) {
 - (void)mtkView:(MTKView *)view drawableSizeWillChange:(CGSize)size {
     
 }
+#pragma clang diagnostic pop
 #endif
 
 @end
